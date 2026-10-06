@@ -8,8 +8,4 @@ feature1,feature2,feature3,label
 9.0,9.5,8.0,Categoría B
 8.5,9.0,8.7,Categoría B
 8.2,8.5,9.2,Categoría B
-<<<<<<< HEAD
 8.8,9.1,8.4,Categoría B
-=======
-8.8,9.1,8.4,Categoría B
->>>>>>> 10a8b62 (Funcion de recomendacion de productos)
