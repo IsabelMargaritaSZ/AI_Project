@@ -1,5 +1,5 @@
-# recommendacion.py
-# Sistema de Recomendación utilizando GitHub Copilot - INACAP- Isabel Suazo
+# recomendacion.py
+# Sistema de Recomendación utilizando GitHub Copilot - INACAP - Isabel Suazo
 
 # Importar las librerías necesarias
 import numpy as np
@@ -12,7 +12,7 @@ from sklearn.neighbors import KNeighborsClassifier
 try:
     data = pd.read_csv('producto.csv')
 except FileNotFoundError:
-    # Datos de demostración en caso de que no exista 'products.csv'
+    # Datos de demostración en caso de que no exista 'producto.csv'
     raw_data = {
         'feature1': [1.0, 2.0, 1.5, 8.0, 9.0, 8.5],
         'feature2': [2.0, 1.0, 1.8, 8.0, 9.5, 9.0],
@@ -39,7 +39,7 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy * 100:.2f}%')
 
-# 6. Función de recomendación (evitando la advertencia de feature names por ausencia de nombres de columnas)
+# 6. Función de recomendación (evitando la advertencia de feature names)
 def recommend(product_features):
     features_df = pd.DataFrame([product_features], columns=['feature1', 'feature2', 'feature3'])
     prediction = model.predict(features_df)
@@ -50,8 +50,4 @@ example_product = [1.0, 2.0, 3.0]
 recommended_product = recommend(example_product)
 print(f'Recommended Product: {recommended_product[0]}')
 
-<<<<<<< HEAD
 print("Datos leídos por el programa:\n", data)
-=======
-print("Datos leídos por el programa:\n", data)
->>>>>>> 10a8b62 (Funcion de recomendacion de productos)
